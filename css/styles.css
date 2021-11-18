@@ -1,0 +1,171 @@
+/*
+============
+font
+============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Estonia&family=Snippet&display=swap");
+
+/*
+============
+variables
+============
+*/
+:root {
+  --color-one: rgb(255, 81, 0);
+  --color-two: rgb(5, 0, 0);
+  --color-three: rgb(116, 115, 115);
+  --color-four: #f7f7f7;
+  --color-five: #000000;
+  --ff: "Snippet", sans-serif;
+  --transition: all 0.3s linear;
+  --spacing: 0.2rem;
+}
+
+/*
+============
+global 
+============
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff);
+  color: var(--color-five);
+  background: var(--color-four);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 2;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  border: 3px solid var(--color-one);
+  color: var(--color-one);
+  margin: 3rem;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  color: var(--color-four);
+  background: var(--color-two);
+  border: 3px solid var(--color-five);
+}
+
+/*
+============
+navbar
+============
+*/
+.menu-center {
+  background: var(--color-three);
+  padding: 0 2rem;
+}
+
+.menu-center li {
+  list-style: none;
+}
+
+.menu-center li a {
+  color: var(--color-one);
+  display: block;
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding: 1rem;
+  letter-spacing: var(--spacing);
+  transition: var(--transition);
+}
+
+.menu-center li a:hover {
+  color: var(--color-two);
+}
+
+@media screen and (min-width: 992px) {
+  .menu-center ul {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .menu-center a {
+    text-align: center;
+  }
+}
+
+/*
+============
+header
+============
+*/
+.header {
+  background: var(--color-one);
+  color: var(--color-four);
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-center p {
+  font-size: 1rem;
+  width: 80%;
+  max-width: 560px;
+  /* letter-spacing: var(--spacing); */
+}
+
+@media screen and (max-width: 600px) {
+  .banner-center {
+    padding: 0 3rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    background: linear-gradient(rgba(255, 81, 0, 0.75), rgba(0, 0, 0, 0.75)),
+      url("../images/image-1.jpeg") center/cover no-repeat fixed;
+  }
+}
