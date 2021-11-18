@@ -169,3 +169,58 @@ header
       url("../images/image-1.jpeg") center/cover no-repeat fixed;
   }
 }
+
+/*
+============
+cards
+============
+*/
+.title {
+  text-align: center;
+  margin: 2rem;
+  margin-bottom: 0;
+}
+.cards-center {
+  width: 80%;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
+  column-gap: 2rem;
+  
+}
+
+.card {
+  border: 1px solid var(--color-three);
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.img-container{
+  height:20rem;
+}
+
+.card-img{
+  object-fit: cover;
+  height: 100%;
+}
+.card-info {
+  padding: 1rem;
+}
+
+.card-info p {
+  letter-spacing: var(--spacing);
+}
+
+.card-footer {
+  background: var(--color-three);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.icon {
+  display: inline-block;
+  color: var(--color-one);
+  padding: 0.5rem 0;
+}
