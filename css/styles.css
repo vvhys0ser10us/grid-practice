@@ -187,7 +187,6 @@ cards
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(368px, 1fr));
   column-gap: 2rem;
-  
 }
 
 .card {
@@ -196,11 +195,11 @@ cards
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
-.img-container{
-  height:20rem;
+.img-container {
+  height: 20rem;
 }
 
-.card-img{
+.card-img {
   object-fit: cover;
   height: 100%;
 }
@@ -217,10 +216,86 @@ cards
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
+  color: var(--color-one);
+  padding: 0.25rem 0.5rem;
 }
 
-.icon {
-  display: inline-block;
-  color: var(--color-one);
-  padding: 0.5rem 0;
+/*
+============
+tiles
+============
+*/
+.tiles {
+  max-width: 1170px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 2rem;
+}
+
+.tiles img{
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .tiles {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  .tiles {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 200px);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    grid-template-areas:
+      "a a a b"
+      "a a a c"
+      "d d d d"
+      "e f f f"
+      "e g h i";
+  }
+
+  .tile1 {
+    grid-area: a;
+  }
+
+  .tile2 {
+    grid-area: b;
+  }
+
+  .tile3 {
+    grid-area: c;
+  }
+  .tile4 {
+    grid-area: d;
+  }
+
+  .tile5 {
+    grid-area: e;
+  }
+  .tile6 {
+    grid-area: f;
+  }
+
+  .tile7 {
+    grid-area: g;
+  }
+
+  .tile8 {
+    grid-area: h;
+  }
+
+  .tile9 {
+    grid-area: i;
+  }
 }
